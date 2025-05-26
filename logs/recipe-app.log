@@ -1,0 +1,27 @@
+2025-05-13 13:05:50 [main] INFO  o.c.n.h.Homework5ApplicationTests - Starting Homework5ApplicationTests using Java 17.0.12 with PID 17412 (started by Noah in C:\Users\Noah\Documents\College\CSC435\Homework_5\homework435\homework435)
+2025-05-13 13:05:50 [main] DEBUG o.c.n.h.Homework5ApplicationTests - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-05-13 13:05:50 [main] INFO  o.c.n.h.Homework5ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2025-05-13 13:05:50 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@301e5d23
+2025-05-13 13:05:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-13 13:05:51 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/testdb user=SA
+2025-05-13 13:05:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-13 13:05:52 [main] INFO  o.c.n.h.services.IngredientService - IngredientService initialized
+2025-05-13 13:05:52 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-13 13:05:52 [main] DEBUG o.s.s.c.a.a.c.AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-05-13 13:05:52 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 16 mappings in 'requestMappingHandlerMapping'
+2025-05-13 13:05:52 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - HTTP GET https://accounts.google.com/.well-known/openid-configuration
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - Reading to [java.util.Map<java.lang.String, java.lang.Object>]
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - HTTP GET https://www.googleapis.com/oauth2/v3/certs
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - Accept=[text/plain, application/json, application/*+json, */*]
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-13 13:05:53 [main] DEBUG o.s.web.client.RestTemplate - Reading to [java.lang.String] as "application/json;charset=UTF-8"
+2025-05-13 13:05:53 [main] DEBUG o.s.s.web.DefaultSecurityFilterChain - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BearerTokenAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-05-13 13:05:54 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-13 13:05:54 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-13 13:05:54 [main] INFO  o.c.n.h.Homework5ApplicationTests - Started Homework5ApplicationTests in 3.762 seconds (process running for 6.474)
+2025-05-13 13:05:54 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@301e5d23, started on Tue May 13 13:05:50 EDT 2025
+2025-05-13 13:05:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-13 13:05:54 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

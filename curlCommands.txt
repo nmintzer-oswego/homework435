@@ -1,0 +1,34 @@
+https://console.cloud.google.com/auth/clients/1071570949727-9kquu4lnmhkn1k3q41ai7fuv80ht0o8o.apps.googleusercontent.com?inv=1&invt=AbxIpw&project=gen-lang-client-0863356038
+
+curl -X GET http://localhost:8080/ingredients
+curl -X POST http://localhost:8080/ingredients -H "Content-Type: application/json" -d "{\"name\":\"Salt\",\"dangerous\":false}"
+curl -X PUT http://localhost:8080/ingredients/1 -H "Content-Type: application/json" -d "{\"name\":\"Salt (Sodium Chloride)\",\"dangerous\":false}"
+curl -X DELETE http://localhost:8080/ingredients/1
+
+curl -X GET http://localhost:8080/recipes
+curl -X GET http://localhost:8080/recipes/1
+curl -X POST http://localhost:8080/recipes -H "Content-Type: application/json" -d "{\"name\":\"Chocolate Cake\"}"
+curl -X POST http://localhost:8080/recipes/1/ingredients/2 -H "Content-Type: application/json" -d "{\"quantity\":2.5,\"unit\":\"cups\"}"
+
+curl -X DELETE http://localhost:8080/recipes/1
+
+
+REM Set your session ID after logging in through a browser (run this line first)
+set JSESSIONID=58BC77936817BFCC03E812A56D82DA75
+
+REM === Ingredient Endpoints (Authenticated) ===
+curl -X GET http://localhost:8080/ingredients -H "Cookie: JSESSIONID=%JSESSIONID%"
+curl -X POST http://localhost:8080/ingredients -H "Content-Type: application/json" -H "Cookie: JSESSIONID=%JSESSIONID%" -d "{\"name\":\"Salt\",\"dangerous\":false}"
+curl -X PUT http://localhost:8080/ingredients/1 -H "Content-Type: application/json" -H "Cookie: JSESSIONID=%JSESSIONID%" -d "{\"name\":\"Salt (Sodium Chloride)\",\"dangerous\":false}"
+curl -X DELETE http://localhost:8080/ingredients/1 -H "Cookie: JSESSIONID=%JSESSIONID%"
+
+REM === Recipe Endpoints ===
+curl -X GET http://localhost:8080/recipes -H "Cookie: JSESSIONID=%JSESSIONID%"
+curl -X GET http://localhost:8080/recipes/1 -H "Cookie: JSESSIONID=%JSESSIONID%"
+curl -X POST http://localhost:8080/recipes -H "Content-Type: application/json" -H "Cookie: JSESSIONID=%JSESSIONID%" -d "{\"name\":\"Chocolate Cake\"}"
+curl -X POST http://localhost:8080/recipes/1/ingredients/2 -H "Content-Type: application/json" -H "Cookie: JSESSIONID=%JSESSIONID%" -d "{\"quantity\":2.5,\"unit\":\"cups\"}"
+curl -X DELETE http://localhost:8080/recipes/1 -H "Cookie: JSESSIONID=%JSESSIONID%"
+
+REM === Alternative: Using Bearer Token (if your implementation supports it) ===
+REM set TOKEN=your-oauth2-token-here
+REM curl -X GET http://localhost:8080/ingredients -H "Authorization: Bearer %TOKEN%"
